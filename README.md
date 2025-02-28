@@ -31,4 +31,4 @@ A POS system enables businesses to handle sales, inventory, and customer managem
    - Authentication and Authorization
 
 ### 3. High Level Component Designs
-1. **User Management Design**
+1. **[User Management Design](./User%20Management%20Design.md)**
