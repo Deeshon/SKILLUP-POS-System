@@ -112,7 +112,7 @@ export const registerCompany = async (
 };
 
 // POST register
-export const registerUser = async (req: Request, res: Response) => {
+export const registerUser = async (req: Request, res: Response): Promise<any> => {
   try {
     const {
       name,
@@ -122,7 +122,6 @@ export const registerUser = async (req: Request, res: Response) => {
       password,
       role,
       companyId,
-      profileImageUrl,
     } = req.body;
 
     // check if a user with provided email already exists
@@ -183,7 +182,7 @@ export const registerUser = async (req: Request, res: Response) => {
   }
 };
 
-export const login = async (req: Request, res: Response) => {
+export const login = async (req: Request, res: Response): Promise<any> => {
   try {
     const { email, password } = req.body;
 
