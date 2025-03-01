@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser'
 import authRouter from './routes/auth.route'
+import allRouter from './routes/all.route'
 
 
 // configure env file
@@ -14,6 +15,7 @@ app.use(json())
 app.use(cookieParser());
 app.use(morgan('combined'))
 app.use('/api/auth', authRouter)
+app.use('/api/all', allRouter)
 
 app.get('/home', (req, res) => {
     res.json({message: "welcome to home"})
