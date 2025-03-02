@@ -42,12 +42,13 @@ model User {
 }
 
 model Store {
-  id        String  @id @default(uuid())
+  id        String    @id @default(uuid())
   name      String
   location  String
-  Company   Company @relation(fields: [companyId], references: [id])
+  Company   Company   @relation(fields: [companyId], references: [id])
   companyId String
   users     User[]
+  Product   Product[]
 
   @@unique([companyId, name])
 }
@@ -55,4 +56,41 @@ model Store {
 enum Role {
   ADMIN
   CASHIER
+}
+
+model Category {
+  id      String    @id @default(uuid())
+  name    String
+  slug    String
+  Product Product[]
+}
+
+model Brand {
+  id      String    @id @default(uuid())
+  name    String
+  slug    String
+  Product Product[]
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  store       Store    @relation(fields: [storeId], references: [id])
+  storeId     String
+  name        String
+  slu         String
+  sku         String
+  description String
+  quantity    String
+  price       Float
+  unit        Unit
+  imageUrls   String[]
+  category    Category @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  Brand       Brand    @relation(fields: [brandId], references: [id])
+  brandId     String
+}
+
+enum Unit {
+  KG
+  PC
 }

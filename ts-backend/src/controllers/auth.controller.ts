@@ -1,9 +1,9 @@
 import dotenv from "dotenv";
-import cloudinary from "../config/cloudinary.config.js";
+import cloudinary from "../config/cloudinary.config";
 import { Response, Request } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import prisma from "../config/db.config.js";
+import prisma from "../config/db.config";
 
 dotenv.config({ path: "./.env" });
 
