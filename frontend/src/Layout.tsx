@@ -11,20 +11,14 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <Header isMenuClose={isMenuClose} setIsMenuClose={setIsMenuClose} />
 
       {/* Main Content Area */}
-      <div className="flex flex-grow overflow-hidden">
+      <div className="flex flex-grow overflow-hidden ">
         {/* Sidebar Menu */}
-        <div
-          className={`${
-            isMenuClose ? "hidden" : "w-1/5"
-          } sm:block bg-navy-600 transition-all duration-300`}
-        >
+        <div className="lg:w-1/5">
           <Menu isMenuClose={isMenuClose} />
         </div>
 
         {/* Main Content (Children) */}
-        <div className="flex-grow overflow-y-auto p-4">
-          {children}
-        </div>
+        <div className="flex-grow overflow-y-auto p-4">{children}</div>
       </div>
     </div>
   );

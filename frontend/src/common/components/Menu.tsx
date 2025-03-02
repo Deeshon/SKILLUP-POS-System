@@ -10,6 +10,7 @@ import {
   MdOutlineQrCode2,
 } from "react-icons/md";
 
+
 const menu: {
   title: string;
   subMenuItems: {
@@ -64,8 +65,8 @@ const Menu = ({ isMenuClose }: TypeMenuProps) => {
   return (
     <div
       className={`bg-navy-500 text-ash-500 ${
-        isMenuClose ? "hidden" : "w-full"
-      } absolute sm:static sm:block p-6 flex flex-col sm:border-r-1 border-navy-300 sm:h-full overflow-y-auto scrollable-div `}
+        isMenuClose ? "-translate-x-full md:translate-x-0" : "w-full"
+      } absolute md:static md:block p-6 flex flex-col md:border-r-1 border-navy-300 md:h-full overflow-y-auto scrollable-div transform transition-transform duration-300 `}
     >
       {menu.map((menuItem, index) => (
         <div key={index} className="grid gap-5 border-b-1 pb-6 mb-10">

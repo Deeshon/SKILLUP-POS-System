@@ -35,3 +35,39 @@ body {
   width: 8px;
   display: none;
 }
+
+.purchases-due {
+  color: #fe9f43 ;
+  background-color: #382548 ;
+}
+
+.sales-due {
+  color: #28c66e ;
+  background-color: #1f3147 ;
+}
+
+.sales-total {
+  color: #00cee7 ;
+  background-color: #1a3256 ;
+}
+
+.expense-total {
+  color: #ea5455 ;
+  background-color: #342343 ;
+}
+
+.customer-card {
+  background-color: #fe9f43;
+}
+
+.supplier-card {
+  background-color: #00d0e7;
+}
+
+.purchase-card {
+  background-color: #1b2950;
+}
+
+.sales-card {
+  background-color: #28c66f;
+}
