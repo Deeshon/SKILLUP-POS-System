@@ -1,3 +1,4 @@
+import useProductList from "../../common/hooks/useProductList"
 import { infostats } from "./__data__/infoStats"
 import { salesStats } from "./__data__/salesStats"
 import ExpiredProductsComponent from "./components/ExpiredProductsComponent"
@@ -5,7 +6,6 @@ import InfoStatComponent from "./components/InfoStatComponent"
 import ProductListComponent from "./components/ProductListComponent"
 import PurchaseAndSalesComponent from "./components/PurchaseAndSalesComponent"
 import SaleStatComponent from "./components/SaleStatComponent"
-import useProductList from "./hooks/useProductList"
 import useProductTable from "./hooks/useProductTable"
 
 const AdminDashboardPage = () => {
