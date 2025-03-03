@@ -1,0 +1,2 @@
+import-product-data:
+\copy "Product" ("storeId", name, slu, sku, description, quantity, price, unit, "imageUrls", "categoryId", "brandId", "manufacturedDate", "expiryDate") FROM 'D:\Deeshon\repos\SKILLUP-POS-System\ts-backend\src\__data__\product-bulk-upload.csv' DELIMITER ',' CSV HEADER;

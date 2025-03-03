@@ -88,6 +88,8 @@ model Product {
   categoryId  String
   Brand       Brand    @relation(fields: [brandId], references: [id])
   brandId     String
+  manufacturedDate DateTime
+  expiryDate DateTime
 }
 
 enum Unit {
