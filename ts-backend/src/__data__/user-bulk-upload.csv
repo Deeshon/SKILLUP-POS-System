@@ -1,0 +1,2 @@
+id,name,email,phone,username,password,role,companyId,updatedAt,profileImageUrl
+82876d7f-883c-4308-9253-20b57f99c4f7,"John Doe","john.doe@gmail.com","08012345678","john.doe","johndoepassword","ADMIN","281d1a51-aeab-4dfb-af50-a96130d740ac","2022-01-01T00:00:00.000Z","https://res.cloudinary.com/dl1q2ufcw/image/upload/v1741020781/swift_pos_images/tadrj6rllznmsvm5hxif.png"

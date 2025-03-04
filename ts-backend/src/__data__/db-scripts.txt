@@ -1,2 +1,17 @@
+import-company-data:
+\copy "Company" (id,name, email, phone,location,"companyLogoUrl") FROM 'D:\Deeshon\repos\SKILLUP-POS-System\ts-backend\src\__data__\company-bulk-upload.csv' DELIMITER ',' CSV HEADER;
+
+impor-user-data
+\copy "User" (id,name,email,phone,username,password,role,"companyId","updatedAt","profileImageUrl") FROM 'D:\Deeshon\repos\SKILLUP-POS-System\ts-backend\src\__data__\user-bulk-upload.csv' DELIMITER ',' CSV HEADER;
+
+impor-store-data
+\copy "Store" (id,name,location,"companyId") FROM 'D:\Deeshon\repos\SKILLUP-POS-System\ts-backend\src\__data__\store-bulk-upload.csv' DELIMITER ',' CSV HEADER;
+
+impor-brand-data
+\copy "Brand" (id,name,slug) FROM 'D:\Deeshon\repos\SKILLUP-POS-System\ts-backend\src\__data__\brand-bulk-upload.csv' DELIMITER ',' CSV HEADER;
+
+impor-category-data
+\copy "Category" (id,name,slug) FROM 'D:\Deeshon\repos\SKILLUP-POS-System\ts-backend\src\__data__\category-bulk-upload.csv' DELIMITER ',' CSV HEADER;
+
 import-product-data:
-\copy "Product" ("storeId", name, slu, sku, description, quantity, price, unit, "imageUrls", "categoryId", "brandId", "manufacturedDate", "expiryDate") FROM 'D:\Deeshon\repos\SKILLUP-POS-System\ts-backend\src\__data__\product-bulk-upload.csv' DELIMITER ',' CSV HEADER;
+\copy "Product" (id,"storeId", name, slu, sku, description, quantity, price, unit, "imageUrls", "categoryId", "brandId", "manufacturedDate", "expiryDate") FROM 'D:\Deeshon\repos\SKILLUP-POS-System\ts-backend\src\__data__\product-bulk-upload.csv' DELIMITER ',' CSV HEADER;
